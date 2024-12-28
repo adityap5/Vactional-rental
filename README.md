@@ -1,4 +1,4 @@
-Vacation Rental
+# Vacation Rental
 
 ## Overview
 
@@ -130,3 +130,4 @@ The layout adjusts dynamically based on screen size, providing an optimized user
 ## User Login Page
 
 ## Mobile View
+![image](https://github.com/user-attachments/assets/45434514-3af2-4de3-bf74-11248412279e)
