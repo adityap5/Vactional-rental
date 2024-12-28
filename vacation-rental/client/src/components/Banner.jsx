@@ -8,7 +8,6 @@ const Banner = () => {
           <h1 className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl md:text-6xl lg:text-8xl font-bold text-black text-center w-full px-4">
             Find Your Perfect Stay
           </h1>
-        {/* <Search css={"absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-50% md:w-3/4 lg:w-1/2 px-4"}/> */}
       </div>
     )
   }

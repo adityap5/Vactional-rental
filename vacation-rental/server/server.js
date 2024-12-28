@@ -3,12 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 
-// Import routes
+
 const authRoutes = require('./routes/auth');
 const propertyRoutes = require('./routes/properties');
 const recommendationRoutes = require("./routes/recommendations");
 
-// Initialize express
 const app = express();
 
 console.log('Environment Variables:');
@@ -17,7 +16,7 @@ console.log('MONGODB_URI:', process.env.MONGO_URI ? 'Set' : 'Not Set');
 console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Set' : 'Not Set');
 
 
-// Connect to database
+
 connectDB().then(() => {
     console.log('Database connection attempted');
 }).catch(err => {
@@ -38,7 +37,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Something broke!' });
 });
 
-// Start server
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

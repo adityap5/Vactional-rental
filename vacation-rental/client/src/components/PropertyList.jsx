@@ -21,24 +21,7 @@ function PropertyList() {
       setLoading(false);
     }
   };
-  const trackInteraction = async (property) => {
-    const token = localStorage.getItem("token");
-    try {
-      await axios.post(
-        `${import.meta.env.VITE_API_URL}/recommendations/track`,
-        {
-          propertyId: property.FIELD1,
-          hotelName: property.Hotel_Name,
-        },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
-      console.log("Interaction tracked:", property.Hotel_Name);
-    } catch (err) {
-      console.error("Failed to track interaction", err);
-    }
-  };
+
   if (loading) {
     return <div>Loading...</div>;
   }

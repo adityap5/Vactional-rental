@@ -4,7 +4,7 @@ const auth = require('../middleware/auth');
 
 const router = express.Router();
 
-// Get all properties
+
 router.get('/', async (req, res) => {
   try {
     const properties = await Property.find().sort({ createdAt: -1 });
@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get single property
 router.get('/:id', async (req, res) => {
   try {
     const property = await Property.findById(req.params.id);
@@ -29,7 +28,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Create property (protected route)
+
 router.post('/', auth, async (req, res) => {
   try {
     const property = new Property(req.body);

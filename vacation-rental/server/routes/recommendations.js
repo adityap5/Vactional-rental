@@ -5,7 +5,6 @@ const authMiddleware = require("../middleware/auth");
 
 const { PythonShell } = require("python-shell");
 
-// Recommendation endpoint
 router.post("/recommend", async (req, res) => {
     const { hotelName, rating, totalReview, location } = req.body;
 
@@ -22,7 +21,6 @@ router.post("/recommend", async (req, res) => {
 });
 
 
-// Track user interaction with a property
 router.post("/track", authMiddleware, async (req, res) => {
   try {
     const { hotelName, review, totalReview, rating, location } = req.body;
@@ -32,7 +30,7 @@ router.post("/track", authMiddleware, async (req, res) => {
 
     if (interaction) {
       interaction.interactionCount += 1;
-      interaction.rating = rating; // Update rating if provided
+      interaction.rating = rating; 
       await interaction.save();
     } else {
       await Interaction.create({
@@ -53,15 +51,13 @@ router.post("/track", authMiddleware, async (req, res) => {
 });
 
 
-// Fetch user-specific recommendations (to be implemented with AI model)
 router.get("/suggestions", authMiddleware, async (req, res) => {
   try {
     const userId = req.user.id;
 
-    // Fetch interactions for training
     const interactions = await Interaction.find({ userId }).lean();
 
-    res.json(interactions); // Send this data to the AI model for recommendations
+    res.json(interactions); 
   } catch (error) {
     console.error("Error fetching suggestions:", error);
     res.status(500).json({ error: "Failed to fetch suggestions" });
