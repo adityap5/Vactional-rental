@@ -106,6 +106,8 @@ Download the Kaggle dataset that is used for property recommendations.
 Implement the recommendation algorithm in Google Colab using TensorFlow.
 Ensure that the recommendation model is integrated with the backend API to send personalized property suggestions to users.
 
+### Google colab link 
+https://colab.research.google.com/drive/1OjdkPsJS378V3HH5ckbnbDeFubuQsRat?usp=sharing
 ## Key Features and Components
 
 1. User Authentication Flow
@@ -124,10 +126,17 @@ The layout adjusts dynamically based on screen size, providing an optimized user
 ## Screenshots
 
 ## Property Listing Page
+![image](https://github.com/user-attachments/assets/ef04471c-693f-41f8-ac70-d808b87201c1)
 
 ## AI Recommendations
+![image](https://github.com/user-attachments/assets/80d7cb3e-d034-4a3c-8890-84bb20f67b3d)
+![image](https://github.com/user-attachments/assets/1dd21cfe-21f0-43d5-a990-3737d511d312)
 
-## User Login Page
+
+## User Register & Login Page
+![image](https://github.com/user-attachments/assets/5c7bab2c-9ed3-4bbb-bddd-106b8d4c3c1a)
+
+![image](https://github.com/user-attachments/assets/1de8e3a1-d46c-4515-87b5-b2b1894b9719)
 
 ## Mobile View
 ![image](https://github.com/user-attachments/assets/45434514-3af2-4de3-bf74-11248412279e)
